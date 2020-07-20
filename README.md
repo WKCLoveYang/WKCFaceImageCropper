@@ -18,8 +18,6 @@ imageView.heightWidthScale = 1
 imageView.faceImg = image
 ```
 
-| 图片 | 含义 |
-| ---- | ---- |
 | <p align="center">
-<img src="https://github.com/WKCLoveYang/WKCFaceImageCropper/raw/master/source/1.png" width="50">
-</p> |  原图 |
+<img src="https://github.com/WKCLoveYang/WKCFaceImageCropper/raw/master/source/1.png" width="200">
+</p>

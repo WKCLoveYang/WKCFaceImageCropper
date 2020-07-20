@@ -19,6 +19,6 @@ imageView.faceImg = image
 ```
 
 <p align="left">
-<img src="https://github.com/WKCLoveYang/WKCFaceImageCropper/raw/master/source/1.png" width="450">
+<img src="https://github.com/WKCLoveYang/WKCFaceImageCropper/raw/master/source/1.png" width="200">
 </p>
 

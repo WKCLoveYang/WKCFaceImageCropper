@@ -8,16 +8,16 @@
 
 import UIKit
 
-open class WKCFaceImageView: UIImageView {
+@objc open class WKCFaceImageView: UIImageView {
     
     /// 高/宽
-    public var heightWidthScale: CGFloat = 1.0
+    @objc public var heightWidthScale: CGFloat = 1.0
     
     /// 裁剪完成时的回调
-    public var imageCropedBlock: ((UIImage) -> ())?
+    @objc public var imageCropedBlock: ((UIImage) -> ())?
     
     /// 裁剪入口, 设置faceImg -> 裁剪
-    public var faceImg: UIImage? {
+    @objc public var faceImg: UIImage? {
         willSet {
             if let value = newValue {
                 WKCFaceImageCropper.shared.cropFaceImage(image: value, heightWidthScale: heightWidthScale) {(result) in

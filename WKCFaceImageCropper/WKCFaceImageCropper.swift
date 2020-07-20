@@ -9,10 +9,10 @@
 import UIKit
 import Vision
 
-public class WKCFaceImageCropper: NSObject {
+@objc public class WKCFaceImageCropper: NSObject {
     
     /// 单例
-    public static let shared: WKCFaceImageCropper = WKCFaceImageCropper()
+   @objc public static let shared: WKCFaceImageCropper = WKCFaceImageCropper()
     
     /// 按人脸位置及所需比例裁剪图片
     /// 注: 无人脸只会按比例裁剪
@@ -20,9 +20,9 @@ public class WKCFaceImageCropper: NSObject {
     ///   - image: 原图
     ///   - heightWidthScale: 高 / 宽
     ///   - completion: 回调
-    public func cropFaceImage(image: UIImage,
-                       heightWidthScale: CGFloat = 1.0,
-                       completion:@escaping ((UIImage) -> ())) {
+    @objc public func cropFaceImage(image: UIImage,
+                                    heightWidthScale: CGFloat = 1.0,
+                                    completion:@escaping ((UIImage) -> ())) {
 
         image.imageCompressed { (result) in
             DispatchQueue.global().async {

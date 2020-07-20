@@ -11,7 +11,7 @@ import UIKit
 extension UIImage {
     /// 图片压缩
     /// - Parameter complete: 回调
-    public func imageCompressed(complete: @escaping (UIImage) -> ()) {
+   @objc public func imageCompressed(complete: @escaping (UIImage) -> ()) {
         DispatchQueue.global().async {
             let finallImageData = self.jpegData(compressionQuality: 1.0);
             let sizeOrigin   = finallImageData!.count;
@@ -35,7 +35,7 @@ extension UIImage {
     /// 重置size
     /// - Parameter size: newSize
     /// - Returns: 重置后的图片
-    public func resized(at size: CGSize) -> UIImage {
+    @objc public func resized(at size: CGSize) -> UIImage {
         var actualHeight = self.size.height
         var actualWidth = self.size.width
         
@@ -66,7 +66,7 @@ extension UIImage {
     /// 裁剪
     /// - Parameter rect: newRect
     /// - Returns: 裁剪后的图片
-    public func cropped(at rect: CGRect) -> UIImage {
+    @objc public func cropped(at rect: CGRect) -> UIImage {
         let origin: CGPoint = CGPoint(x: -rect.origin.x, y: -rect.origin.y)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, self.scale)
         self.draw(at: origin)
